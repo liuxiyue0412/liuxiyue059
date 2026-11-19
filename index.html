@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 微软雅黑;
+            line-height: 60px;
+        }
+        body{
+            background-color: rgb(105, 227, 231);
+        }
+        .yijihezi{
+            width: 120px;
+            height: auto;
+            margin: 54px 0 0 550px;
+        }
+        .yijiliebiao{
+            width: 120px;
+        }
+        .yijiliebiao>li{
+            width: 120px;
+            height: 150px;
+            position: relative;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+        }
+        .erjihezi{
+            position: absolute;
+            left:120px;
+            bottom:50px;
+            background-color: rgba(206, 178, 34, 0.673);
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+            transition: all 300ms linear;
+        }
+        .erjihezi a{
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .erjiliebiao{
+            width: 120px;
+        }
+        .erjiliebiao>li{
+            width: 120px;
+            height:40px;
+        }
+        .yijiliebiao>li:hover .erjihezi{
+            width: 360px;
+            padding: 10px;
+        }
+        .yijiliebiao>li>a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 60px;
+            background-color: #bb1313;
+            z-index: -1;
+            transition: all 300ms linear;
+}
+        .yijiliebiao>li:hover a::after{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijiliebiao">
+            <li>
+                <a href=" ">个人信息</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">姓名：刘西月</a ></li>
+                        <li><a href="#">专业：网新</a ></li>
+                        <li><a href="#">爱好：画画</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">技能展示</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">视频剪辑</a ></li>
+                        <li><a href="#">图片修图</a ></li>
+                        <li><a href="#">摄影</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">学习经历</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">在校学习网新课</a ></li>
+                        <li><a href="#">参与创新项目</a ></li>
+                        <li><a href="#">练习网页设计</a ></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
